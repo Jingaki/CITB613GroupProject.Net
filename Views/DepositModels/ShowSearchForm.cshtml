@@ -1,0 +1,92 @@
+﻿@model GroupProjectDepositCatalogWebApp.Models.SearchFormEntity
+
+<h4>SearchFormEntity</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ShowSearchResult" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TypeOfDeposit" class="control-label"></label>
+                <select asp-for="TypeOfDeposit" class="form-control" asp-items="Html.GetEnumSelectList<DepositType>()"></select>
+                <span asp-validation-for="TypeOfDeposit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InvestmentSum" class="control-label"></label>
+                <input asp-for="InvestmentSum" class="form-control" />
+                <span asp-validation-for="InvestmentSum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrencyType" class="control-label"></label>
+                <select asp-for="CurrencyType" class="form-control" asp-items="Html.GetEnumSelectList<CurrencyType>()">
+                    <option value="">All</option>
+                </select>
+                <span asp-validation-for="CurrencyType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DurrationPlanned" class="control-label"></label>
+                <input asp-for="DurrationPlanned" class="form-control" />
+                <span asp-validation-for="DurrationPlanned" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InterestPaymentType" class="control-label"></label>
+                <select asp-for="InterestPaymentType" class="form-control" asp-items="Html.GetEnumSelectList<InterestPaymentType>()">
+                    <option value="">All</option>
+                </select>
+                <span asp-validation-for="InterestPaymentType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OwnershipType" class="control-label"></label>
+                <select asp-for="OwnershipType" class="form-control" asp-items="Html.GetEnumSelectList<OwnershipType>()">
+                    <option value="">All</option>
+                </select>
+                <span asp-validation-for="OwnershipType" class="text-danger"></span>
+            </div>            
+            <div class="form-group">
+                <label asp-for="TypeOfInterest" class="control-label"></label>
+                <select asp-for="TypeOfInterest" class="form-control" asp-items="Html.GetEnumSelectList<InterestEnumType>()">
+                    <option value="">All</option>
+                </select>
+                <span asp-validation-for="TypeOfInterest" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="AllTimeDeposits" /> @Html.DisplayNameFor(model => model.AllTimeDeposits)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="TimeDeposit" /> @Html.DisplayNameFor(model => model.TimeDeposit)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="AllOverdraftPossabilities" /> @Html.DisplayNameFor(model => model.AllOverdraftPossabilities)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="OverdraftPossability" /> @Html.DisplayNameFor(model => model.OverdraftPossability)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="AllCreditPossabilities" /> @Html.DisplayNameFor(model => model.AllCreditPossabilities)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CreditPossability" /> @Html.DisplayNameFor(model => model.CreditPossability)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
