@@ -1,0 +1,54 @@
+﻿@model GroupProjectDepositCatalogWebApp.Models.CalculatorEntity
+
+@{
+    ViewData["Title"] = "CleanUp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DepositModel</h4>
+    <hr />
+    <dl class="row">
+        <form asp-action="CleanUp" method="post">
+        <div class="form-group">
+            <label asp-for="InvestmentSum" class="control-label"></label>
+                <input asp-for="InvestmentSum" class="form-control" value="@Model.InvestmentSum" />
+            <span asp-validation-for="InvestmentSum" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DurrationInMonths" class="control-label">Durration in Months</label>
+                <input asp-for="DurrationInMonths" class="form-control" value="@Model.DurrationInMonths"/>
+            <span asp-validation-for="DurrationInMonths" class="text-danger"></span>
+        </div>
+        <input type="hidden" name="ProductId" value="@Model.productId" />
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EffectiveYearlyInterest)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EffectiveYearlyInterest)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InterestSum)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InterestSum)
+        </dd>
+        
+        <div class="form-group">
+            <input type="submit" value="Calculate" class="btn btn-primary" />
+        </div>
+        </form>
+    </dl>
+</div>
+<div>
+    <a asp-action="Details" asp-route-id="@Model?.productId">Details</a> |
+    <a asp-action="Index">Make a new search?</a>
+</div>

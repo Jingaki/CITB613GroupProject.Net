@@ -245,6 +245,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\PC\\source\\repos\\GroupProjectDepositCatalogWebApp\\GroupProjectDepositCatalogWebApp\\wwwroot\\media\\3dots.png",
+      "PackagePath": "staticwebassets\\media\\3dots.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\GroupProjectDepositCatalogWebApp\\GroupProjectDepositCatalogWebApp\\wwwroot\\media\\MoneyUpLogo.png",
+      "PackagePath": "staticwebassets\\media\\MoneyUpLogo.png"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.GroupProjectDepositCatalogWebApp.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

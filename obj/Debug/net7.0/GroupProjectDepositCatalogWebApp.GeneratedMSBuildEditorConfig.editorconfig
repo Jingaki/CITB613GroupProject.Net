@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/PC/source/repos/GroupProjectDepositCatalogWebApp/GroupProjectDepositCatalogWebApp/Views/DepositModels/CleanUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3NpdE1vZGVsc1xDbGVhblVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/PC/source/repos/GroupProjectDepositCatalogWebApp/GroupProjectDepositCatalogWebApp/Views/DepositModels/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3NpdE1vZGVsc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,16 +68,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3NpdE1vZGVsc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/source/repos/GroupProjectDepositCatalogWebApp/GroupProjectDepositCatalogWebApp/Views/DepositModels/ShowSearchForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3NpdE1vZGVsc1xTaG93U2VhcmNoRm9ybS5jc2h0bWw=
+[C:/Users/PC/source/repos/GroupProjectDepositCatalogWebApp/GroupProjectDepositCatalogWebApp/Views/DepositModels/SIR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3NpdE1vZGVsc1xTSVIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/source/repos/GroupProjectDepositCatalogWebApp/GroupProjectDepositCatalogWebApp/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/PC/source/repos/GroupProjectDepositCatalogWebApp/GroupProjectDepositCatalogWebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PC/source/repos/GroupProjectDepositCatalogWebApp/GroupProjectDepositCatalogWebApp/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/PC/source/repos/GroupProjectDepositCatalogWebApp/GroupProjectDepositCatalogWebApp/Views/Shared/Error.cshtml]

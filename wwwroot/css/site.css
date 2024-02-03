@@ -1,22 +1,157 @@
 html {
-  font-size: 14px;
+  font-size: 20px;
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
   position: relative;
-  min-height: 100%;
+
 }
 
 body {
   margin-bottom: 60px;
+  height: 100%;
+}
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+body {
+    background-image: linear-gradient(-100deg, #316233 0%, #DAF7A6 100%);
+    color: #333;
+    font-size: 0.875rem;
+    background-attachment: fixed;
+}
+
+
+
+header {
+    /*background-color: #5f8f61;*/
+    height: 80px;
+    width : 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.logo > a > img {
+    margin-left: 10px;
+    margin-top: 5px;
+    height: 70px;
+    width: 120px;
+    border-radius: 10%;
+    position: relative;
+    right: 0px;
+}
+
+.info {
+    float: right;
+    margin-top: 1.25%;
+    position: relative;
+    left: 72%;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.separator {
+    background-color: white;
+    height: 5px;
+}
+.login-form, .registration-form {
+    background-color: #FFFFFF;
+    margin: auto;
+    padding: 2.5em;
+    padding-bottom: 1rem;
+    max-width: 32rem;
+    width: 95%;
+    border-radius: 0.5em;
+}
+
+.auth {
+    display: flex;
+}
+
+#gray-h1 {
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+#gray-h2 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #848694;
+    margin-bottom: 3.5rem;
+}
+
+#input-username, #passwords {
+    height: 2.5rem;
+    width: 100%;
+    line-height: 1rem;
+    border: none;
+    margin-bottom: 1rem;
+    border-bottom: 1px;
+    border-bottom-color: #4154E0;
+    box-shadow: 0 1px 0 0 #557de0;
+}
+
+#endOfForm {
+    margin-top: 3rem;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+#login-btn, #register-btn {
+    background-color: #369436;
+    color: white;
+    font-size: 1rem;
+    height: 2.375rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    border: none;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    margin-bottom: 1.75rem;
+}
+
+#login-link, #registration-link {
+    font-size: 1rem;
+    color: #4154E0;
+    text-decoration: none;
+}
+
+#checkbox-t-and-c {
+    padding-right: 2em;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    background: #270505;
+    color: white;
+    padding: 1rem;
+}
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
 }

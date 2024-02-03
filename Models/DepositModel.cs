@@ -5,8 +5,9 @@ namespace GroupProjectDepositCatalogWebApp.Models
     public class DepositModel
     {
         public int Id { get; set; }
-        [Required]
+        [Required]        
         public string DepositName { get; set; } = null!;
+
         public bool TimeDeposit { get; set; }
         public bool OverdraftPossability { get; set; }
         public bool CreditPossability { get; set; }
@@ -18,21 +19,33 @@ namespace GroupProjectDepositCatalogWebApp.Models
         public CurrencyType CurrencyType { get; set; }
         public InterestPaymentType InterestPaymentType { get; set; }
         public OwnershipType OwnershipType { get; set; }
-
+        [Required]
+        [DisplayFormat(DataFormatString = "{0:0.00}%")]
         public float EffectiveAnnualInterestRate { get; set; }
 
+        public ICollection<ShiftingInterestRateDataModel>? ShiftingInteresData { get; set; }
+
+        [Display(Name = "URL")]
+        [DataType(DataType.Url)]
+        [DisplayFormat(DataFormatString = "<a href='{0}'>{0}</a>", HtmlEncode = false)]
         public string? WebLinkToOffer { get; set; }
-
+        [Required]
+        [StringLength(200, MinimumLength = 6, ErrorMessage = "The length of MyString must be between 6 and 200 characters.")]
         public string? DescriptionOfNegotiatedInterestRate { get; set; }
-
+        [DisplayFormat(DataFormatString = "{0:0.00}")]
         public float MinSum { get; set; }
+        [Required]
+        [StringLength(200, MinimumLength = 6, ErrorMessage = "The length of MyString must be between 6 and 200 characters.")]
         public string? MinSumDescription { get; set; }
         public int MinDuration { get; set; }
-
+        [DisplayFormat(DataFormatString = "{0:0.00}")]
         public float MaxSum { get; set; }
+        [Required]
+        [StringLength(200, MinimumLength = 6, ErrorMessage = "The length of MyString must be between 6 and 200 characters.")]
         public string? MaxSumDescription { get; set; }
         public int MaxDuration { get; set; }
-
+        [Required]
+        [StringLength(200, MinimumLength = 6, ErrorMessage = "The length of MyString must be between 6 and 200 characters.")]
         public string? DurationDescription { get; set; }
 
         // Foreign key
@@ -46,8 +59,8 @@ namespace GroupProjectDepositCatalogWebApp.Models
 }
 public enum DepositType
 {
-    StandartTermDeposit = 1,
-    MountlyDeposit = 2
+    Standart = 1,
+    Mountly = 2
 }
 public enum InterestEnumType
 {
@@ -73,5 +86,5 @@ public enum InterestPaymentType
     Monthly = 1,
     Quarterly = 2,
     Semiannually = 3,
-    Annually
+    Annually = 4
 }

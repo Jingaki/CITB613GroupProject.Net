@@ -1,6 +1,7 @@
 ﻿using GroupProjectDepositCatalogWebApp.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Xml;
 
 namespace GroupProjectDepositCatalogWebApp.Data
 {
@@ -11,6 +12,7 @@ namespace GroupProjectDepositCatalogWebApp.Data
         {
         }
         public DbSet<DepositModel> Deposits { get; set; }
+        public DbSet<ShiftingInterestRateDataModel> ShiftingInterests_table { get; set; }
         public DbSet<ApplicationUserModel> ApplicationUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -21,14 +23,15 @@ namespace GroupProjectDepositCatalogWebApp.Data
                  .HasForeignKey(d => d.MyApplicationUserId)
                  .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<SearchFormEntity>(sfe => {
-                sfe.HasNoKey();
-            });//every time you create a table you must remove the create  SearchFormEntity table because it is a useless table why why why
-            //most of dotnet logic is baffling stack upon stack of contradicting statements......
-
+            modelBuilder.Entity<DepositModel>()
+                .HasMany(s => s.ShiftingInteresData)
+                .WithOne(d => d.Deposit)
+                .HasForeignKey(s => s.DepositId)
+                .OnDelete(DeleteBehavior.Cascade);
+            
             base.OnModelCreating(modelBuilder);//works only for Identity(account system that is maintained by dotnet) classes
-        }
 
-        public DbSet<GroupProjectDepositCatalogWebApp.Models.SearchFormEntity> SearchFormEntity { get; set; } = default!;
+            modelBuilder.Ignore<SearchFormEntity>();
+        }
     }
 }

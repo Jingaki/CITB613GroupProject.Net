@@ -1,0 +1,68 @@
+﻿@model SIRentity
+
+<div class="row">
+    <div>
+        <form id="myForm" asp-action="CreateSIRD" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-container">
+                
+                <div class="form-group">
+                    <label asp-for="ModelData.Month" class="control-label">Month period</label>
+                    <input asp-for="ModelData.Month" class="form-control" value="@Model.ModelData.Month" />
+                    <span asp-validation-for="ModelData.Month" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ModelData.YearlyEIR" class="control-label">Yearly effective interest rate for that period</label>
+                    <input asp-for="ModelData.YearlyEIR" class="form-control" value="@Model.ModelData.YearlyEIR" />
+                    <span asp-validation-for="ModelData.YearlyEIR" class="text-danger"></span>
+                </div>
+                @Html.HiddenFor(m => m.ModelData.Deposit)
+                @Html.HiddenFor(m => m.ModelData.DepositId)
+            </div>
+            <div class="form-group text-center" style="margin-top: 5px">
+                <input type="submit" value="Save" class="btn btn-primary" style="" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="table-container">
+    <table class="table" style="text-align:center">
+        <thead>
+            <tr>
+                <th>
+                    Month
+                </th>
+                <th>
+                    Yearly effective interest rate
+                </th>
+                
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.ResultsData!=null) {
+                foreach (var item in Model.ResultsData)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Month)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.YearlyEIR)
+                        </td>
+
+                        <td>
+                            <a asp-action="DeleteSIRD" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                                        
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-action="Index">Search?</a>
+</div>

@@ -2,8 +2,8 @@
 {
     public class SearchResultEntity
     {
-        public int Id { get; set; }
-        public string Username { get; set; } = null!;
+        public int IdentifyingNum { get; set; }
+        public string? Username { get; set; } = null!;
         public string? DepositName { get; set; }
         public CurrencyType TypeOfCurrency { get; set; }
         public float EffectiveAnnualInterestRate { get; set; }
